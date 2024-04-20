@@ -1,3 +1,5 @@
+# urls.py
+
 """
 URL configuration for portal project.
 
@@ -14,9 +16,11 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.urls import include, path, re_path
 from django.contrib import admin
-from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('django-admin/', include('wagtail.admin.urls')),
+    re_path(r'^', include('wagtail.urls')),
 ]

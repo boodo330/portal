@@ -1,3 +1,5 @@
+# settings.py
+
 """
 Django settings for portal project.
 
@@ -31,6 +33,22 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'wagtail.admin',
+    'wagtail.documents',
+    'wagtail.images',
+    'wagtail.sites',
+    'wagtail.users',
+    'wagtail.snippets',
+    'wagtail.search',
+    'wagtail.embeds',
+    'wagtail.contrib.redirects',
+    'wagtail.contrib.forms',
+    'wagtail',
+    'taggit',
+    'modelcluster',
+    'home',
+
+    # Ensure the default Django apps are below the Wagtail ones
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
